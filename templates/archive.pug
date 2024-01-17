@@ -1,0 +1,55 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    title The Courtyard
+    link(rel='stylesheet' type='text/css' href='/css/main.css')
+    script(src="/js/main.js")
+body(data-logged-in=loggedIn, data-username=username)
+    div.login-box
+        if loggedIn == "true"
+            a(href='/api/logout') Log Out
+        else
+            a.account-button(href='/loginpage') Log In
+            a.account-button(href='/signuppage') Create Account
+    h1 The Courtyard
+    h2 Archive
+    include navbar.pug
+    div.posts-container
+        ul.posts-container-list
+            div.filter-form-div
+                    form.filter-form(action='/api/archive' method='post')
+                        label(for='filter') Filter Posts  
+                        select.select(name='filter' id='filter')
+                            if filter == "new"
+                                option(value='new', selected) New
+                                option(value='hot') Hot
+                            else
+                                option(value='new') New
+                                option(value='hot', selected) Hot
+                        button.input-button-small(type='submit') Apply
+            each post in posts
+                li.post-item(data-post-id=post.id)
+                    div.post(data-post-id=post.id)
+                        if loggedIn && username == post.user
+                            p.post-user #{'@' + post.user + ' (me)'}
+                        else
+                            p.post-user #{'@' + post.user}
+                        p.post-content #{post.content}
+                        - var timestampDate = new Date(post.time);
+                        - var month = timestampDate.getMonth() + 1;
+                        - var day = timestampDate.getDate();
+                        - var year = timestampDate.getFullYear();
+                        - var formattedDate = `${month.toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}/${year}`;
+                        - var hours = timestampDate.getHours();
+                        - var minutes = timestampDate.getMinutes();
+
+                        // Create a formatted date and time string in MM/DD/YYYY HH:MM format
+                        - var formattedDateTime = `${month.toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}/${year} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+                        p.post-time #{formattedDateTime}
+                        div.like-div
+                            img.like-button(src="/images/unliked", alt="Like Button", data-post-id=post.id, data-liked="false")
+                            span.post-likes(data-post-id=post.id) #{post.likes}
+                        if username == post.user
+                            div.button-div(data-post-id=post.id)
+                                span.edit-button(data-post-id=post.id) Edit
+                                span.delete-button(data-post-id=post.id) Delete

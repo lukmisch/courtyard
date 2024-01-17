@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Quicksand:wght@700&family=Young+Serif&display=swap');
+
+body {
+    background-color: #fcfefe;
+    font-family: 'MedievalSharp', cursive;
+    background-image: url('/images/background');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+div.nav-div {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 10px 0px 0px 10px;
+    padding-left: 30px;
+}
+
+div.nav-div a {
+    text-align: center;
+    background-color: #7D7D7C;
+    border-radius: 50px;
+    padding: 5px 8px 5px 8px;
+    margin: 0px 0px 0px 10px;
+    font-size: 20px;
+    font-family: 'Bellefair', serif;
+}
+
+div.nav-div a:hover {
+    background-color: #363225; 
+}
+
+a.load-all-posts {
+    text-align: center;
+    background-color: white;
+    border-radius: 50px;
+    padding: 8px 8px 8px 8px;
+    margin: 0px 0px 40px 0px;
+    font-size: 25px;
+    font-family: 'Bellefair', serif;
+    color: black;
+}
+
+a.load-all-posts:hover {
+    background-color: #7D7D7C;
+} 
+
+div.posts-container {
+    text-align: center;
+}
+
+a {
+    text-decoration:none;
+    color: white;
+}
+
+div.login-box {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    font-size: 25px;
+    font-family: 'Bellefair', serif;
+}
+
+div.login-box a {
+    text-align: center;
+    background-color: #7D7D7C;
+    border-radius: 50px;
+    padding: 5px 8px 5px 8px;
+    margin: 0px 5px 0px 5px;
+}
+
+div.login-box a:hover {
+    background-color: #363225; 
+}
+
+ul.posts-container-list {
+    width: 60%;
+    display: inline-block;
+    text-align: left;
+    list-style-type: none;
+    margin-top: 0px;
+}
+
+.post {
+    padding: 10px 10px 10px 10px;
+    border-style: outset;
+    border-radius: 10px;
+    width:100%;
+    max-width:100%;
+    background-color: white;
+}
+
+li.post-item {
+    margin: 10px 10px 10px 10px;
+}
+
+div.new-post {
+    background-color: white;
+    padding-top: 5px;
+    font-family: 'Bellefair', serif;
+    font-size: 30px;
+    padding: 10px 10px 10px 10px;
+    border-style: outset;
+    border-radius: 10px;
+    width:100%;
+    max-width:100%;
+}
+
+.alert {
+    margin: 5px 0px 10px 0px;
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    margin: 0px;
+}
+
+p.post-user {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 5px 0px 10px 0px;
+    background-color: #C6CFDF;
+}
+
+p.post-content {
+    font-family: 'Bellefair', serif;
+    font-size: 30px;
+    margin: 0px 0px 0px 0px;
+}
+
+p.post-time {
+    font-family: 'Bellefair', serif;
+    font-size: 18px;
+    margin: 0px 0px 0px 0px;
+    text-align: right;
+}
+
+ul.signinlist {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+    padding: 0px;
+}
+
+ul.signinlist li {
+    background-color: #7D7D7C;
+    border-radius: 50px;
+    font-size: 25px;
+    padding: 8px 10px 8px 10px;
+    margin: 0px 10px 10px 0px;
+}
+
+ul.signinlist li:hover{
+    background-color: #363225; 
+}
+
+h1 {
+    background-color: #2B5237;
+    color: white;
+    text-shadow: 3px 3px 3px #7D7D7C;
+    font-size: 60px;
+    padding: 5px 0px 5px 40px;
+    font-family: 'MedievalSharp', cursive;
+    margin: 10px 0px 0px 10px;
+}
+
+h2 {
+    background-color: #66905E;
+    color: white;
+    text-shadow: 3px 3px 3px #7D7D7C;
+    font-size: 40px;
+    padding: 0px 0px 0px 40px;
+    font-family: 'MedievalSharp', cursive;
+    margin: 0px 0px 0px 10px;
+}
+
+img.like-button {
+    height: 35px;
+    width: 35px;
+    margin: 0px 0px 0px 0px;
+    cursor: pointer;
+}
+
+span.post-likes {
+    font-weight: bold;
+    font-size: 22px;
+    margin: 8px 0px 0px 5px;
+    font-family: 'Bellefair', serif;
+}
+
+div.like-div {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin: 5px 0px 0px 0px;
+}
+
+/* login */
+
+.form-div {
+    margin: auto;
+    background-color: white;
+    padding-top: 5px;
+    font-family: 'Bellefair', serif;
+    font-size: 25px;
+    padding: 10px 10px 10px 10px;
+    border-style: outset;
+    border-radius: 10px;
+    width:40%;
+    max-width:100%;
+    margin-top: 16px;
+}
+
+.form {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.input {
+    height: 25px;
+}
+
+.input-button {
+    border-radius: 12px;
+    font-family: 'Bellefair', serif;
+    background-color: #66905E;
+    height: 35px;
+    width: 40%;
+    margin: auto;
+    font-size: 20px;
+}
+
+.input-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* From https://www.w3schools.com/css/css3_buttons.asp */
+    background-color: #2B5237;
+    cursor: pointer;
+}
+
+/* filter */
+
+.filter-form-div {
+    background-color: white;
+    padding-top: 5px;
+    font-family: 'Bellefair', serif;
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    border-style: outset;
+    border-radius: 10px;
+    width:25%;
+    margin-left: 10px;
+}
+
+.select {
+    background-color: white;
+    width: 60px;
+}
+
+.input-button-small:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* From https://www.w3schools.com/css/css3_buttons.asp */
+    background-color: #2B5237;
+    cursor: pointer;
+}
+
+.input-button-small {
+    border-radius: 12px;
+    font-family: 'Bellefair', serif;
+    background-color: #66905E;
+    height: 25px;
+    width: 30%;
+    margin: auto;
+    margin-left: 8px;
+    font-size: 15px;
+}
+
+/* posts */
+p.create-new-post {
+    margin: 5px 0px 10px 0px;
+    font-family: 'MedievalSharp', cursive;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+textarea.post-content {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    font-size: 30px;
+    font-family: 'Bellefair', serif;
+}
+
+.post-form {
+    width: 90%;
+    margin: auto;
+}
+
+.post-button {
+    border-radius: 12px;
+    font-family: 'Bellefair', serif;
+    background-color: #66905E;
+    height: 35px;
+    width: 10%;
+    font-size: 20px;
+}
+
+.post-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* From https://www.w3schools.com/css/css3_buttons.asp */
+    background-color: #2B5237;
+    cursor: pointer;
+}
+
+div.button-div {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin: 5px 0px 0px 0px;
+}
+
+.edit-button {
+    text-align: center;
+    background-color: #7D7D7C;
+    border-radius: 50px;
+    padding: 5px 12px 5px 12px;
+    margin: 5px 5px 0px 5px;
+    font-family: 'Bellefair', serif;
+    color: white;
+}
+
+.delete-button {
+    text-align: center;
+    background-color: #7D7D7C;
+    border-radius: 50px;
+    padding: 5px 12px 5px 12px;
+    margin: 5px 2px 0px 2px;
+    font-family: 'Bellefair', serif;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #363225;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #363225;
+    cursor: pointer;
+}

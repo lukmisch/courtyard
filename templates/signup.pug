@@ -1,0 +1,26 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    title The Courtyard
+    link(rel='stylesheet' type='text/css' href='/css/main.css')
+    script(src="/js/main.js")
+body(data-logged-in=loggedIn, data-username=username)
+    h1 The Courtyard
+    h2 Create Account
+    include navbar.pug
+    .form-div
+        if error
+            p.error #{errMsg}
+        p.alert Please fill out a username and password to create your account. You will then be logged in and returned to the homepage.
+        br
+        form.form(action='/api/createaccount' method='post')
+            label(for='username') Username: 
+            input.input(type='text' name='username' required='')
+            br
+            label(for='password1') Password: 
+            input.input(type='password' name='password1' required='')
+            br
+            label(for='password2') Re-enter Password: 
+            input.input(type='password' name='password2' required='')
+            br
+            input.input-button(type='submit' value='Create Account')

@@ -1,0 +1,12 @@
+---
+:id: 220838255
+:submitters:
+- :name: Luke Mische
+  :email: misch109@umn.edu
+:created_at: !ruby/object:ActiveSupport::TimeWithZone
+  utc: 2023-12-17 05:11:40.446866000 Z
+  zone: !ruby/object:ActiveSupport::TimeZone
+    name: America/Los_Angeles
+  time: 2023-12-16 21:11:40.446866000 Z
+:status: processed
+:score: 100.0

@@ -1,5 +1,8 @@
 The Courtyard - Instructions and Implementations
 
+![Home page](/resources/images/homePage.JPG)
+![Home page](/resources/images/archivePage.JPG)
+
 Launching: run 'node server.js' in your console. Then navigate to 'localhost:4131'.
 This will start you at the homepage of the website.
 
